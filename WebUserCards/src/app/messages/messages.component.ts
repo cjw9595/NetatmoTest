@@ -1,6 +1,9 @@
 import { Component } from '@angular/core';
 import {MessageService} from "../service/message.service";
 
+/**
+ * @author: Jiawei CHEN
+ */
 @Component({
   selector: 'app-messages',
   templateUrl: './messages.component.html',
