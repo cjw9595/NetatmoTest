@@ -1,7 +1,9 @@
+/**
+ * @author; Jiawei CHEN
+ */
 export interface RandomUser {
-  info:Info,
-  results: Results[],
-
+  info:Info,  //even if we receive more than one users, only one Info object
+  results: Results[], // a list because we get 10 users at a time
 }
 export interface Info {
   seed:    string;

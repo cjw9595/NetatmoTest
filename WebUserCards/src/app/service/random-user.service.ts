@@ -5,6 +5,9 @@ import {MessageService} from "./message.service";
 import {map, Observable, of, tap, throwError} from "rxjs";
 import { catchError } from 'rxjs/operators';
 
+/**
+ * @auther:Jiawei CHEN
+ */
 @Injectable({
   providedIn: 'root'
 })
@@ -19,6 +22,10 @@ export class RandomUserService {
     this.messageService.add(`HeroService: ${message}`);
   }
 
+  /**
+   * function used to handle errors
+   * @param error
+   */
   handleError(error: HttpErrorResponse){
     let errorMessage = "Unknown error!";
     if(error.error instanceof ErrorEvent) {
@@ -31,6 +38,9 @@ export class RandomUserService {
     return throwError(errorMessage);
   }
 
+  /**
+   * function used to get 10 random users from API RandomUsers Generator
+   */
   getUsers(): Observable<RandomUser>{
     return this.http.get<RandomUser>(this.usersUrl).
     pipe(
