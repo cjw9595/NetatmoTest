@@ -1,11 +1,14 @@
-li{
+li {
   list-style: none;
-  margin-bottom: 15px;
+  margin-bottom: 20px;
 }
-
-mat-card {
-  background-color: lightblue;
-
+.information{
+  background-color: cadetblue;
+  width: auto;
+  height: auto;
+  margin-left: auto;
+  margin-right: auto;
+  margin-bottom: 10px;
 }
 
 .picture {
@@ -18,9 +21,30 @@ mat-card {
 }
 
 .random-user {
-  column-count: 5;
+  column-count: 3;
+  background-color: aliceblue;
 }
 
 .random-user li {
   break-inside: avoid;
+}
+
+.addUserButton {
+  background-color: mediumslateblue;
+  opacity:0.8;
+  border: none;
+  color: white;
+  padding: 10px 10px;
+  text-align: center;
+  border-radius: 25%;
+}
+
+.SupprimerButton {
+  margin: auto;
+  background-color: mediumslateblue;
+  opacity:0.8;
+  border: none;
+  color: white;
+  padding: 10px 10px;
+  text-align: center;
 }

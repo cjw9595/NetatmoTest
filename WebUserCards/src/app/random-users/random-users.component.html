@@ -1,23 +1,28 @@
+<div>
+  <button class="addUserButton" (click)="addNewUsers()">
+    <mat-icon>add</mat-icon>
+  </button>
+</div>
+<br>
 <div class="random-user">
-  <button class="addUserButton" (click)="addNewUsers()">Add 10 new users</button>
-<li *ngFor="let user of this.randomUsersList">
-    <mat-card>
-      <mat-card-header>
-        <mat-card-title>{{user.name.first}} {{user.name.last}}</mat-card-title>
-      </mat-card-header>
-      <img mat-card-image class="picture" src="{{user.picture.large}}">
-      <mat-card-content>
-        <ul>
-          <li><span>Nation:</span> {{ user.nat }}</li>
-          <li><span>Email:</span> {{user.email}}</li>
-          <li><span>Phone:</span> {{ user.phone }}</li>
-          <li><span>Address:</span> {{ user.location.street.number }}  {{ user.location.street.name | titlecase }},
-            {{ user.location.city | titlecase }}, {{ user.location.state }}</li>
-        </ul>
-      </mat-card-content>
-      <mat-card-actions>
-       <button class="SupprimerButton" (click)="deleteUser(user)">Delete this user</button>
-      </mat-card-actions>
-    </mat-card>
+  <li *ngFor="let user of this.randomUsersList">
+  <mat-card class="information">
+    <mat-card-header>
+    <mat-card-title>{{user.name.first}} {{user.name.last}}</mat-card-title>
+    </mat-card-header>
+    <img mat-card-image class="picture" src="{{user.picture.large}}">
+    <mat-card-content>
+      <ul>
+        <li><mat-icon>person</mat-icon> {{ user.gender }}</li>
+        <li><mat-icon>email</mat-icon> {{user.email}}</li>
+        <li><mat-icon>phone</mat-icon> {{ user.phone }}</li>
+        <li><mat-icon>map</mat-icon> {{ user.location.street.number }}  {{ user.location.street.name | titlecase }},
+          {{ user.location.city | titlecase }}, {{ user.location.state }}</li>
+      </ul>
+    </mat-card-content>
+    <mat-card-actions>
+      <button class="SupprimerButton" (click)="deleteUser(user)">Delete this user</button>
+    </mat-card-actions>
+</mat-card>
   </li>
 </div>
