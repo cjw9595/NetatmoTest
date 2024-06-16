@@ -11,6 +11,7 @@ export class RandomUsersComponent implements OnInit {
 
   randomUsersList:Results[] = [];
 
+
   constructor(private randomUserService: RandomUserService) {
   }
 
@@ -24,13 +25,14 @@ export class RandomUsersComponent implements OnInit {
       if (data.results.length > 0) {
         for (let i=0;i<data.results.length;i++)
         {
-          this.randomUsersList.push(data.results[i])
+          this.randomUsersList.push(data.results[i]);
         }
       }
     });
 
    // this.randomUserService.getUsers().subscribe(users => this.userDetail=users);
-    console.log(this.randomUsersList)
+    console.log(this.randomUsersList);
+
 
   }
 
@@ -45,6 +47,5 @@ export class RandomUsersComponent implements OnInit {
     this.getUsers();
 
   }
-
 
 }

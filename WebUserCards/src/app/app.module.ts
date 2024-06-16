@@ -6,6 +6,8 @@ import { AppComponent } from './app.component';
 import { RandomUsersComponent } from './random-users/random-users.component';
 import { MessagesComponent } from './messages/messages.component';
 import {MatCardModule} from "@angular/material/card";
+import {MatToolbarModule} from "@angular/material/toolbar";
+import {MatIconModule} from "@angular/material/icon";
 
 @NgModule({
   declarations: [
@@ -18,6 +20,8 @@ import {MatCardModule} from "@angular/material/card";
     AppRoutingModule,
     HttpClientModule,
     MatCardModule,
+    MatToolbarModule,
+    MatIconModule,
 
   ],
   providers: [],
